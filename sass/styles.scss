@@ -78,8 +78,15 @@ body{
     width: 1px;
   }
 
-  .hum-of{
+  
+  .site-humburger{
       display: none;
+      margin-left: auto;
+      width: 32px;
+      height: 23px;
+      background: transparent url("../images/icon-hamburger.svg") no-repeat center center;
+      border: none; outline: none;
+      transition: 0.5s ease;
   }
   ul{
       list-style-type: none;
@@ -101,7 +108,11 @@ body{
          @include displayFlex;
          max-width: 1120px;
          margin: 0 auto;
+         transition: 0.5s ease
  }
+    &__hum{
+        @include displayFlex;
+    }
 } 
 .navigation-container{
     @include displayFlex;
@@ -155,7 +166,7 @@ body{
     .header-link::after{
         content: "";
         margin: 2px 8px 0;
-        background: url("../images/Path.png") no-repeat;
+        background: url("../images/icon-arrow-light.svg") no-repeat;
         width: 10px;
         height: 8px;
         transition: 0.3s ease;
@@ -263,6 +274,8 @@ body{
     section{
         max-width: 1120px;
         margin: 0 auto;
+        padding-left: 30px;
+        padding-right: 30px;
     }
     .future-content{
         padding-top: 40px;
@@ -313,7 +326,7 @@ h4.caption{
     max-width: 1440px;
 
     img{
-        margin-left: 130px;
+        margin-left: auto;
         margin-right: 100px;
     }
     h4.state-caption{
@@ -371,5 +384,69 @@ h4.caption{
                 text-decoration: underline;
             }
          }
+    }
+}
+
+/* RESPONSIVE */
+@media (max-width: 1125px) {
+    .main-content{
+        background: url("../images/illustration-editor-desktop.svg") no-repeat 500px 15%,
+                    url("../images/illustration-laptop-desktop.svg") no-repeat -600px 90%;
+    }
+}
+
+@media (max-width: 940px) {
+    .site-header__nav{
+        display: inline;
+    }
+    .nav-off{
+        display: none;
+    }
+    .navigation-container{
+        position: fixed;
+        top: 120px;
+        left: 50%;
+        transform: translateX(-50%);
+        background-color: #fff;
+        max-width: 900px;
+        margin: 0 auto;
+        box-shadow: 0px 20px 40px rgba(0, 0, 0, 0.243444);
+        border-radius: 5px;
+        min-height: 65px;
+
+        .header-link{
+            font-weight: 600;
+            font-size: 18px;
+            line-height: 28px;
+            text-align: center;
+            color: #1F3E5A;
+            opacity: 0.75;
+            &:hover{
+                opacity: 1;
+            }
+            &::after{
+                background: url("../images/icon-arrow-dark.svg") no-repeat;
+            }
+        }
+    }
+    .header-buttons{ 
+     .log{
+        color:#1F3E5A;
+        opacity: 0.75;
+        &:hover{
+            color: #1F3E5A;
+            opacity: 1;
+        }
+    }
+    .padding40{
+        background: linear-gradient(135deg, #FF8F71 0%, #FF3E55 100%);
+        color: #fff;
+    }
+}
+    .site-humburger{
+        display: inline-block;
+    }
+    .hum-on{
+        background-image: url("../images/icon-close.svg");
     }
 }

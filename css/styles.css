@@ -68,8 +68,16 @@ body {
   width: 1px;
 }
 
-.hum-of {
+.site-humburger {
   display: none;
+  margin-left: auto;
+  width: 32px;
+  height: 23px;
+  background: transparent url("../images/icon-hamburger.svg") no-repeat center center;
+  border: none;
+  outline: none;
+  -webkit-transition: 0.5s ease;
+  transition: 0.5s ease;
 }
 
 ul {
@@ -95,6 +103,17 @@ ul {
           align-items: center;
   max-width: 1120px;
   margin: 0 auto;
+  -webkit-transition: 0.5s ease;
+  transition: 0.5s ease;
+}
+
+.site-header__hum {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .navigation-container {
@@ -174,7 +193,7 @@ ul {
 .site-header__lists .header-link::after {
   content: "";
   margin: 2px 8px 0;
-  background: url("../images/Path.png") no-repeat;
+  background: url("../images/icon-arrow-light.svg") no-repeat;
   width: 10px;
   height: 8px;
   -webkit-transition: 0.3s ease;
@@ -300,6 +319,8 @@ ul {
 .main-content section {
   max-width: 1120px;
   margin: 0 auto;
+  padding-left: 30px;
+  padding-right: 30px;
 }
 
 .main-content .future-content {
@@ -360,7 +381,7 @@ h4.caption {
 }
 
 #state-content img {
-  margin-left: 130px;
+  margin-left: auto;
   margin-right: 100px;
 }
 
@@ -426,5 +447,67 @@ h4.caption {
 
 .site-footer-container a:hover {
   text-decoration: underline;
+}
+
+/* RESPONSIVE */
+@media (max-width: 1125px) {
+  .main-content {
+    background: url("../images/illustration-editor-desktop.svg") no-repeat 500px 15%, url("../images/illustration-laptop-desktop.svg") no-repeat -600px 90%;
+  }
+}
+
+@media (max-width: 940px) {
+  .site-header__nav {
+    display: inline;
+  }
+  .nav-off {
+    display: none;
+  }
+  .navigation-container {
+    position: fixed;
+    top: 120px;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+            transform: translateX(-50%);
+    background-color: #fff;
+    max-width: 900px;
+    margin: 0 auto;
+    -webkit-box-shadow: 0px 20px 40px rgba(0, 0, 0, 0.243444);
+            box-shadow: 0px 20px 40px rgba(0, 0, 0, 0.243444);
+    border-radius: 5px;
+    min-height: 65px;
+  }
+  .navigation-container .header-link {
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 28px;
+    text-align: center;
+    color: #1F3E5A;
+    opacity: 0.75;
+  }
+  .navigation-container .header-link:hover {
+    opacity: 1;
+  }
+  .navigation-container .header-link::after {
+    background: url("../images/icon-arrow-dark.svg") no-repeat;
+  }
+  .header-buttons .log {
+    color: #1F3E5A;
+    opacity: 0.75;
+  }
+  .header-buttons .log:hover {
+    color: #1F3E5A;
+    opacity: 1;
+  }
+  .header-buttons .padding40 {
+    background: linear-gradient(135deg, #FF8F71 0%, #FF3E55 100%);
+    color: #fff;
+  }
+  .site-humburger {
+    display: inline-block;
+  }
+  .hum-on {
+    background-image: url("../images/icon-close.svg");
+  }
 }
 /*# sourceMappingURL=styles.css.map */
