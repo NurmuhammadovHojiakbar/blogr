@@ -96,6 +96,11 @@ body{
       display: flex;
       align-items: center;
   }
+
+  @mixin marginAuto() {
+      margin-left: auto;
+      margin-right: auto;
+  }
 /*  HEADER */
 .site-header{
     padding: 60px 30px 150px;
@@ -450,3 +455,94 @@ h4.caption{
         background-image: url("../images/icon-close.svg");
     }
 }
+@media (max-width: 920px) {
+   #state-content{
+       padding: 0;
+       flex-direction: column;
+       height: auto;
+       background-position: center center;
+       img,div{
+           position: relative;
+           bottom: 200px;
+           margin:0;
+       }
+       img{
+           width: 328px;
+       }
+   }
+}
+@media (max-width: 700px) {
+    .main-content{
+        text-align: center;
+        background: url("../images/illustration-editor-desktop.svg") no-repeat center 8%,
+        url("../images/illustration-laptop-desktop.svg") no-repeat center 78%;
+        background-size: 326px;
+    }
+    .art-content{
+        position: relative;
+        top: 150px;
+    }
+    .navigation-container{
+        z-index: 99;
+        flex-direction: column;
+        width: 324px;
+        .site-header__lists{
+            flex-direction: column;
+            padding-left: 0;
+            margin: 0;
+
+            li{
+                @include displayFlex;
+                flex-direction: column;
+                margin-left: 0;
+                margin-top: 24px;
+                position: relative;
+                .ul-hover{
+                    width: 276px;
+                    position: relative;
+                    top: 24px;
+                    left: 50%;
+                    background: rgba(45, 46, 64, 0.08);
+
+                    a{
+                        color: rgba(31, 62, 90, 0.75);
+                    }
+                }
+            }
+        }
+        .header-buttons{
+            flex-direction: column;
+            text-align: center;
+            margin-top: 24px;
+
+            button{
+                margin: 24px 0;
+            }
+            .padding40{
+                margin-top: 0;
+            }
+        }
+    }
+    .site-header__container{
+        h2{
+            font-size: 36px;
+            line-height: 55px;
+        }
+        p{
+            font-size: 18px;
+            line-height: 28px;
+        }
+    }
+    .content-info{
+        @include marginAuto();
+    }
+    h3.caption{
+        font-size: 28px;
+        line-height: 43px;
+        margin-bottom: 400px;
+    }
+    h4.caption{
+        font-size: 28px;
+        line-height: 32px;
+    }
+ }
