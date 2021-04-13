@@ -618,4 +618,28 @@ h4.caption {
     line-height: 32px;
   }
 }
+
+@media (max-width: 550px) {
+  .site-footer-container {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .site-footer-container .footer-logo {
+    text-align: center;
+    margin-bottom: 70px;
+  }
+  .site-footer-container ul {
+    padding: 0;
+    margin-bottom: 40px;
+    text-align: center;
+  }
+  .site-footer-container ul .footer-caption {
+    margin-bottom: 21px;
+  }
+}
 /*# sourceMappingURL=styles.css.map */

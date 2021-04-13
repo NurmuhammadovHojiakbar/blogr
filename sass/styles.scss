@@ -546,3 +546,22 @@ h4.caption{
         line-height: 32px;
     }
  }
+@media (max-width: 550px){
+  .site-footer-container{
+      .footer-logo{
+          text-align: center;
+          margin-bottom: 70px;
+      }
+      flex-direction: column;
+      justify-content: center;
+      ul{
+          padding: 0;
+          margin-bottom: 40px;
+          text-align: center;
+
+          .footer-caption{
+              margin-bottom: 21px;
+          }
+      }
+  }  
+} 
